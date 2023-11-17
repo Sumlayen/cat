@@ -42,7 +42,7 @@ def analyzeimage():
         probability = detection[2]
 
         #If the confidence of the model is lower than 75%, we do nothing(continue looping) 
-        if probability < 0.75:
+        if probability < 0.7:
             continue
 
         #Get (x, y) of bounding box
@@ -61,7 +61,7 @@ def analyzeimage():
 
         print(label)
         #####Logic here to detect cat in this loop.  Fire off record function.
-        #Return 1 if success then loop again in new.py.
+        #Return 1 if success then loop again in main.py.
         if label == 'CAT' or label == 'DOG':
                 print('I found a ' + str(label).lower() + '.')
                 text = f"{label} {probability * 100:.2f}%"

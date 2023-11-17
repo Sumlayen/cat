@@ -20,5 +20,5 @@ while True:
 
 
 cap.release()
-writer.release()
+#writer.release()
 cv2.destroyAllWindows()
